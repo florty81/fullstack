@@ -4,9 +4,8 @@ sequenceDiagram
 
     browser->>server: POST https://studies.cs.helsinki.fi/exampleapp/new_note_spa
     activate server
-    server-->>browser: status code 201 created
+    server-->>browser: JSON data returned to browser
     deactivate server
 
-    Note right of browser: The request contains the new note as JSON data containing both the content and date of the note
-
+    Note right of browser: The request contains the new note as JSON data
     Note right of browser: The browser executes the callback function that renders the notes
